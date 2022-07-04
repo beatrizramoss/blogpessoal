@@ -16,10 +16,14 @@ import javax.validation.constraints.Size;
 @Table(name = "postagem")
 public class Postagem {
 	
+	//define a chave primaria
 	@Id
+	
+	//define que o campo id vai ser autoinrecrement
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
+	//notnull indica o titulo como um campo obrigatorio
 	@NotNull
 	@Size(min = 5, max = 100)
 	private String titulo;
@@ -29,6 +33,8 @@ public class Postagem {
 	@Size(min = 10, max = 500)
 	private String texto;
 	
+	
+	// anotação que pega data e hora automaticamente do seu computador @UpdateTimestamp
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date date = new java.sql.Date(System.currentTimeMillis());
 	public long getId() {

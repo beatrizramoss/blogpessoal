@@ -2,6 +2,8 @@ package com.generation.blogpessoal.model;
 
 public class UserLogin {
 	
+	private Long id;
+	
 	private String nome;
 	
 	private String usuario;
@@ -9,6 +11,16 @@ public class UserLogin {
 	private String senha;
 	
 	private String token;
+	
+	public long getId() {
+		return id;
+	}
+	
+	public void setId(long id) {
+		this.id = id;
+		// TODO Auto-generated method stub
+		
+	}
 
 	public String getNome() {
 		return nome;
